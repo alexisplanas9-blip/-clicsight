@@ -481,8 +481,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
 
 
 
-#solar-hero-bg{position:absolute;inset:0;background:url("../assets/images/système-solaire.jpg") center/cover no-repeat;opacity:.18;pointer-events:none;z-index:0}
-#solar-finale-bg{position:absolute;inset:0;background:url("../assets/images/système-solaire.jpg") center/cover no-repeat;opacity:.28;pointer-events:none;z-index:0}
+#solar-hero-bg{position:absolute;inset:0;background:url("assets/images/système-solaire.jpg") center/cover no-repeat;opacity:0.18;pointer-events:none;z-index:0}
+#solar-finale-bg{position:absolute;inset:0;background:url("assets/images/système-solaire.jpg") center/cover no-repeat;opacity:0.28;pointer-events:none;z-index:0}
 #solar-finale{position:relative;z-index:1;padding:9rem 0;overflow:hidden;background:#050508}
 
 
@@ -607,7 +607,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
 
 /* Galaxie visible sur tous les écrans */
 @media(max-width:768px){
-  #solar-hero-bg,#solar-finale-bg{opacity:.18!important;display:block!important}
+  #solar-hero-bg,#solar-finale-bg{position:absolute;inset:0;background:url("assets/images/système-solaire.jpg") center/cover no-repeat;opacity:0.28;pointer-events:none;z-index:0}
 }
 
 /* ── Alternance desktop (sections paires) ── */
