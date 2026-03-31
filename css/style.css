@@ -186,9 +186,9 @@ nav{
   pointer-events:none;
 }
 
+.ps-inner{display:flex;flex-direction:row;}
+.ps-inner>*{flex:1;min-width:0}
 .ps-inner{
-  display:grid;
-  grid-template-columns:1fr 1fr;
   gap:4rem;
   align-items:center;
   width:100%;max-width:1280px;
@@ -457,7 +457,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
   .nav-links,.nav-cta{display:none}
   .container{padding:0 1.5rem}
   .ps-inner{
-    grid-template-columns:1fr;
+    flex-direction:column;
     gap:2rem;padding:4rem 1.5rem;
     text-align:center;
   }
@@ -481,8 +481,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
 
 
 
-#solar-hero-bg{position:absolute;inset:0;background:url("../assets/images/solar-system.jpg") center/cover no-repeat;opacity:.25;pointer-events:none;z-index:0}
-#solar-finale-bg{position:absolute;inset:0;background:url("../assets/images/solar-system.jpg") center/cover no-repeat;opacity:.28;pointer-events:none;z-index:0}
+#solar-hero-bg{position:absolute;inset:0;background:url("../assets/images/système-solaire.jpg") center/cover no-repeat;opacity:.18;pointer-events:none;z-index:0}
+#solar-finale-bg{position:absolute;inset:0;background:url("../assets/images/système-solaire.jpg") center/cover no-repeat;opacity:.28;pointer-events:none;z-index:0}
 #solar-finale{position:relative;z-index:1;padding:9rem 0;overflow:hidden;background:#050508}
 
 
@@ -514,9 +514,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
 
 /* ── ALTERNANCE GAUCHE/DROITE ── */
 /* Impair : texte gauche, planète droite (défaut) */
-.planet-section .ps-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.planet-section .ps-inner{display:flex;flex-direction:row;
   gap: 4rem;
   align-items: center;
 }
@@ -576,9 +574,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
   #burger{display:block}
 }
 
-#ps-terre::before,#ps-neptune::before,#ps-lune::before,#ps-venus::before,#ps-soleil::before{
-  background:radial-gradient(ellipse 60% 70% at 25% 50%,var(--glow),transparent 65%)!important;
-}
+
 
 
 .ps-planet-img{mix-blend-mode:lighten}
@@ -604,10 +600,18 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
 }
 
 /* ── Glow direction pour sections paires ── */
-#ps-terre::before,#ps-neptune::before,
-#ps-lune::before,#ps-venus::before,#ps-soleil::before{
-  background:radial-gradient(ellipse 60% 70% at 25% 50%,var(--glow),transparent 65%);
-}
+
 
 
 /* ── Planètes sans fond noir ── */
+
+/* Galaxie visible sur tous les écrans */
+@media(max-width:768px){
+  #solar-hero-bg,#solar-finale-bg{opacity:.18!important;display:block!important}
+}
+
+/* ── Alternance desktop (sections paires) ── */
+@media(min-width:1024px){
+  #ps-terre .ps-inner,#ps-neptune .ps-inner,#ps-lune .ps-inner,#ps-venus .ps-inner,#ps-soleil .ps-inner{flex-direction:row-reverse}
+}
+#ps-terre::before,#ps-neptune::before,#ps-lune::before,#ps-venus::before,#ps-soleil::before{background:radial-gradient(ellipse 60% 70% at 25% 50%,var(--glow),transparent 65%)!important}
