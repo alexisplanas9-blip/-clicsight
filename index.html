@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexis Planas — Expert Web & Digital · clicsight.fr</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+<div id="cur">✦</div>
+<canvas id="stars"></canvas>
+<canvas id="rc"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#"><img src="assets/images/logo.png" alt="Clicsight" height="56" alt="Clicsight" style="height:38px;width:auto;vertical-align:middle;filter:brightness(1.1)"></a>
+  <ul class="nav-links">
+    <li><a href="services.html">Site web</a></li>
+    <li><a href="communication.html">Communication</a></li>
+    <li><a href="resultats.html">Parlons résultats</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Démarrer un projet</a>
+  <!-- Burger mobile -->
+  <button id="burger" onclick="toggleMenu()">☰</button>
+</nav>
+
+<!-- INTRO -->
+<section id="intro">
+  <div id="solar-hero-bg"></div>
+  <div id="intro-glow"></div>
+  <h1 id="hero-title">Clicsight<br>L'univers du web<br>et de la <em>communication.</em></h1>
+  <p id="hero-sub">Expert WordPress, SEO &amp; stratégie digitale — embarquez pour un voyage qui transforme votre présence en ligne.</p>
+  <div id="chat">
+    <div class="astro">👨‍🚀</div>
+    <div id="chat-text"><span id="typed"></span><span class="cursor">|</span></div>
+    <button id="btn-launch" onclick="launch()">🚀 Embarquer</button>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" style="position:relative;z-index:1">
+  <div class="marquee-track">
+    <div class="marquee-item">WordPress expert</div>
+    <div class="marquee-item">SEO & référencement</div>
+    <div class="marquee-item">Stratégie digitale</div>
+    <div class="marquee-item">Réseaux sociaux</div>
+    <div class="marquee-item">Création de contenu</div>
+    <div class="marquee-item">Performance web</div>
+    <div class="marquee-item">Identité visuelle</div>
+    <div class="marquee-item">Brand strategy</div>
+    <div class="marquee-item">WordPress expert</div>
+    <div class="marquee-item">SEO & référencement</div>
+    <div class="marquee-item">Stratégie digitale</div>
+    <div class="marquee-item">Réseaux sociaux</div>
+    <div class="marquee-item">Création de contenu</div>
+    <div class="marquee-item">Performance web</div>
+    <div class="marquee-item">Identité visuelle</div>
+    <div class="marquee-item">Brand strategy</div>
+  </div>
+</div>
+
+<!-- PLANET HEADER -->
+<div class="planets-header">
+  <div class="s-tag reveal">Le système solaire du marketing</div>
+  <h2 class="s-title reveal">Chaque planète<br>est un <em>défi digital.</em></h2>
+</div>
+
+
+<section class="planet-section" id="ps-saturne" style="--glow:rgba(210,165,80,.35);--acc:#e8c85a">
+  <div class="ps-inner">
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">01</span>
+        <span class="ps-tag">Notoriété & Communication</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Saturne</span>
+        <span class="ps-sub">se démarque.</span>
+        <span class="ps-sub2">Votre marque aussi.</span>
+      </h2>
+      <p class="ps-desc">Ses anneaux la rendent unique dans tout le système solaire — elle se démarque de toutes les autres. Votre marque aussi doit avoir ce truc qui la rend différente et reconnaissable.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#e8c85a;color:#e8c85a">Brand awareness</span><span class="pill" style="border-color:#e8c85a;color:#e8c85a">Storytelling</span><span class="pill" style="border-color:#e8c85a;color:#e8c85a">Campagnes sociales</span><span class="pill" style="border-color:#e8c85a;color:#e8c85a">Relations presse</span></div>
+      <a class="ps-cta" href="contact.html">Révéler ma marque →</a>
+    </div>
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/saturn.jpg" alt="Saturne">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-terre" style="--glow:rgba(40,130,220,.35);--acc:#4db8ff">
+  <div class="ps-inner">
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/earth.jpg" alt="La Terre">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">02</span>
+        <span class="ps-tag">Site web & Différenciation</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">La Terre</span>
+        <span class="ps-sub">trop de concurrence.</span>
+        <span class="ps-sub2">Comment sortir du lot ?</span>
+      </h2>
+      <p class="ps-desc">La planète la plus habitée du système solaire — et donc la plus concurrentielle. Des millions de marques se battent pour la même attention. Comment sortir du lot ?</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#4db8ff;color:#4db8ff">Site WordPress</span><span class="pill" style="border-color:#4db8ff;color:#4db8ff">Identité visuelle</span><span class="pill" style="border-color:#4db8ff;color:#4db8ff">UX & conversion</span><span class="pill" style="border-color:#4db8ff;color:#4db8ff">Responsive design</span></div>
+      <a class="ps-cta" href="contact.html">Créer mon site →</a>
+    </div>
+  
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-mars" style="--glow:rgba(200,55,30,.35);--acc:#ff6b4a">
+  <div class="ps-inner">
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">03</span>
+        <span class="ps-tag">Image de marque & Copywriting</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Mars</span>
+        <span class="ps-sub">intrigue.</span>
+        <span class="ps-sub2">Votre image de marque aussi.</span>
+      </h2>
+      <p class="ps-desc">Inexploré, mystérieux, fascinant. Mars attire les regards depuis toujours sans même essayer. Votre image de marque doit provoquer ce même effet — intriguer, attirer, marquer les esprits.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#ff6b4a;color:#ff6b4a">Brand strategy</span><span class="pill" style="border-color:#ff6b4a;color:#ff6b4a">Copywriting</span><span class="pill" style="border-color:#ff6b4a;color:#ff6b4a">Refonte identité</span><span class="pill" style="border-color:#ff6b4a;color:#ff6b4a">Tonalité de marque</span></div>
+      <a class="ps-cta" href="contact.html">Rendre ma marque désirable →</a>
+    </div>
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/mars.jpg" alt="Mars">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-neptune" style="--glow:rgba(30,70,220,.35);--acc:#7b9fff">
+  <div class="ps-inner">
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/neptune.jpg" alt="Neptune">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">04</span>
+        <span class="ps-tag">SEO & Visibilité organique</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Neptune</span>
+        <span class="ps-sub">est invisible.</span>
+        <span class="ps-sub2">Votre site aussi ?</span>
+      </h2>
+      <p class="ps-desc">Si loin qu'on ne peut pas la voir à l'œil nu — elle est invisible sans les bons instruments. Sans SEO, votre site c'est exactement pareil. Il existe, mais personne ne le trouve.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#7b9fff;color:#7b9fff">Audit SEO</span><span class="pill" style="border-color:#7b9fff;color:#7b9fff">Mots-clés</span><span class="pill" style="border-color:#7b9fff;color:#7b9fff">Contenu optimisé</span><span class="pill" style="border-color:#7b9fff;color:#7b9fff">Netlinking</span></div>
+      <a class="ps-cta" href="contact.html">Sortir de l'obscurité →</a>
+    </div>
+  
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-jupiter" style="--glow:rgba(200,130,60,.35);--acc:#ffaa55">
+  <div class="ps-inner">
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">05</span>
+        <span class="ps-tag">Réseaux sociaux & Engagement</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Jupiter</span>
+        <span class="ps-sub">domine.</span>
+        <span class="ps-sub2">Mais s'adapte-t-elle à sa cible ?</span>
+      </h2>
+      <p class="ps-desc">La plus massive, la plus dominante du système solaire. Pourtant ce n'est pas la plus choisie. Sur les réseaux, la taille ne suffit pas — il faut s'adapter à sa cible.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#ffaa55;color:#ffaa55">Stratégie contenu</span><span class="pill" style="border-color:#ffaa55;color:#ffaa55">Community management</span><span class="pill" style="border-color:#ffaa55;color:#ffaa55">Calendrier éditorial</span><span class="pill" style="border-color:#ffaa55;color:#ffaa55">Créations visuelles</span></div>
+      <a class="ps-cta" href="contact.html">Dominer mes réseaux →</a>
+    </div>
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/jupiter.jpg" alt="Jupiter">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-lune" style="--glow:rgba(180,180,200,.35);--acc:#c8c8e8">
+  <div class="ps-inner">
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/moon.png" alt="La Lune">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">06</span>
+        <span class="ps-tag">Création de contenu</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">La Lune</span>
+        <span class="ps-sub">capte tout.</span>
+        <span class="ps-sub2">Sans lumière propre.</span>
+      </h2>
+      <p class="ps-desc">Elle capte toute l'attention dans la nuit sans avoir sa propre lumière. Votre contenu doit faire pareil — éclairer votre audience et refléter votre marque.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#c8c8e8;color:#c8c8e8">Visuels & photos</span><span class="pill" style="border-color:#c8c8e8;color:#c8c8e8">Articles & blog</span><span class="pill" style="border-color:#c8c8e8;color:#c8c8e8">Newsletters</span><span class="pill" style="border-color:#c8c8e8;color:#c8c8e8">Scripts vidéo</span></div>
+      <a class="ps-cta" href="contact.html">Créer mon contenu →</a>
+    </div>
+  
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-uranus" style="--glow:rgba(60,200,200,.35);--acc:#4dd4d4">
+  <div class="ps-inner">
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">07</span>
+        <span class="ps-tag">Stratégie digitale</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Uranus</span>
+        <span class="ps-sub">pense différemment.</span>
+        <span class="ps-sub2">Votre stratégie aussi.</span>
+      </h2>
+      <p class="ps-desc">Elle tourne sur un axe incliné à 98° — complètement hors normes. Une bonne stratégie digitale c'est ça : penser différemment pour se démarquer vraiment.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#4dd4d4;color:#4dd4d4">Audit digital</span><span class="pill" style="border-color:#4dd4d4;color:#4dd4d4">Plan d'action 360°</span><span class="pill" style="border-color:#4dd4d4;color:#4dd4d4">Objectifs & KPIs</span><span class="pill" style="border-color:#4dd4d4;color:#4dd4d4">Roadmap marketing</span></div>
+      <a class="ps-cta" href="contact.html">Bâtir ma stratégie →</a>
+    </div>
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/uranus.png" alt="Uranus">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-venus" style="--glow:rgba(220,150,40,.35);--acc:#f0b040">
+  <div class="ps-inner">
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/venus.png" alt="Vénus">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">08</span>
+        <span class="ps-tag">Identité visuelle</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Vénus</span>
+        <span class="ps-sub">brille.</span>
+        <span class="ps-sub2">Votre identité visuelle aussi.</span>
+      </h2>
+      <p class="ps-desc">L'astre le plus brillant du ciel nocturne — elle attire l'œil avant même qu'on sache ce que c'est. Votre identité visuelle doit provoquer ce même réflexe.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#f0b040;color:#f0b040">Logo & charte</span><span class="pill" style="border-color:#f0b040;color:#f0b040">Palette & typographie</span><span class="pill" style="border-color:#f0b040;color:#f0b040">Templates</span><span class="pill" style="border-color:#f0b040;color:#f0b040">Brand book</span></div>
+      <a class="ps-cta" href="contact.html">Créer mon identité →</a>
+    </div>
+  
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-mercure" style="--glow:rgba(160,140,120,.35);--acc:#c8b090">
+  <div class="ps-inner">
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">09</span>
+        <span class="ps-tag">Performance & Rapidité</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Mercure</span>
+        <span class="ps-sub">est rapide.</span>
+        <span class="ps-sub2">Votre site, lui ?</span>
+      </h2>
+      <p class="ps-desc">La plus rapide du système solaire — elle boucle son tour en 88 jours. Un site lent perd 40% de ses visiteurs. La performance, c'est directement de la croissance.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#c8b090;color:#c8b090">Audit performance</span><span class="pill" style="border-color:#c8b090;color:#c8b090">Core Web Vitals</span><span class="pill" style="border-color:#c8b090;color:#c8b090">Optimisation vitesse</span><span class="pill" style="border-color:#c8b090;color:#c8b090">Cache & CDN</span></div>
+      <a class="ps-cta" href="contact.html">Accélérer mon site →</a>
+    </div>
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/mercury.jpg" alt="Mercure">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="p-divider"></div>
+<section class="planet-section" id="ps-soleil" style="--glow:rgba(255,140,20,.35);--acc:#ffaa00">
+  <div class="ps-inner">
+    <div class="ps-right">
+      <div class="ps-planet-wrap">
+        <img class="ps-planet-img" src="assets/planets/sun.jpg" alt="Le Soleil">
+        <div class="ps-planet-glow"></div>
+      </div>
+    </div>
+    <div class="ps-left">
+      <div class="ps-eyebrow">
+        <span class="ps-num">10</span>
+        <span class="ps-tag">Accompagnement global</span>
+      </div>
+      <h2 class="ps-title">
+        <span class="ps-name">Le Soleil</span>
+        <span class="ps-sub">illumine tout.</span>
+        <span class="ps-sub2">Je fais pareil.</span>
+      </h2>
+      <p class="ps-desc">Tout le système solaire tourne autour de lui — il donne vie à tout ce qui l'entoure. Mon accompagnement global couvre site, SEO, réseaux et stratégie. Tout pour que votre marque rayonne.</p>
+      <div class="ps-pills"><span class="pill" style="border-color:#ffaa00;color:#ffaa00">Suivi mensuel</span><span class="pill" style="border-color:#ffaa00;color:#ffaa00">Stratégie 360°</span><span class="pill" style="border-color:#ffaa00;color:#ffaa00">Reporting</span><span class="pill" style="border-color:#ffaa00;color:#ffaa00">Support réactif</span></div>
+      <a class="ps-cta" href="contact.html">Découvrir l'accompagnement →</a>
+    </div>
+  
+  </div>
+</section>
+
+
+
+<!-- ═══ SOLAR SYSTEM FINALE ═══ -->
+<section id="solar-finale" style="position:relative;z-index:1;padding:8rem 0;overflow:hidden;">
+  <div id="solar-finale-bg"></div>
+  <div style="position:relative;z-index:2;text-align:center;padding:0 2rem;">
+    <div class="s-tag reveal">L'écosystème digital</div>
+    <h2 class="s-title reveal" style="max-width:800px;margin:1rem auto 2rem;">
+      Comme le système solaire,<br>
+      votre entreprise a besoin<br>
+      de <em>chaque planète</em> pour rayonner.
+    </h2>
+    <p class="reveal" style="font-size:1rem;color:var(--muted);max-width:580px;margin:0 auto 3rem;line-height:1.8;">
+      Site web, SEO, réseaux sociaux, contenu, identité visuelle, performance... 
+      Chaque service est une planète. Isolées, elles existent. 
+      Ensemble, elles forment un système qui propulse votre marque.
+    </p>
+    <a class="btn-primary reveal" href="#contact" style="display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2.2rem;border-radius:100px;background:var(--accent);color:#000;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s;">
+      Construire mon système →
+    </a>
+  </div>
+</section>
+<!-- METRICS -->
+<section class="metrics-section" id="resultats">
+  <div class="container">
+    <div class="reveal"><div class="s-tag">Les chiffres parlent</div>
+    <h2 class="s-title">Votre croissance<br>commence <em>ici.</em></h2></div>
+    <div class="metrics-grid">
+      <div class="metric reveal"><div class="metric-val" data-target="300" data-suffix="%">0%</div><div class="metric-label">Augmentation moyenne du trafic organique</div></div>
+      <div class="metric reveal"><div class="metric-val" data-target="100" data-suffix="k+">0</div><div class="metric-label">Abonnés cumulés gérés</div></div>
+      <div class="metric reveal"><div class="metric-val" data-target="40" data-suffix="%">0%</div><div class="metric-label">Amélioration taux de conversion</div></div>
+      <div class="metric reveal"><div class="metric-val" data-target="50" data-suffix="+">0</div><div class="metric-label">Projets réalisés avec succès</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="container">
+    <div class="reveal"><div class="s-tag">Ma méthode</div>
+    <h2 class="s-title">Comprendre<br>avant d'<em>agir.</em></h2></div>
+    <div class="process-grid">
+      <div class="step reveal"><div class="step-n">01</div><h3>Comprendre votre activité</h3><p>J'analyse votre marché, vos objectifs et votre clientèle avant d'écrire la moindre ligne de code ou stratégie.</p></div>
+      <div class="step reveal"><div class="step-n">02</div><h3>Construire pour performer</h3><p>Site et stratégie pensés pour attirer, convaincre et générer des résultats mesurables — pas juste pour faire joli.</p></div>
+      <div class="step reveal"><div class="step-n">03</div><h3>Optimiser en continu</h3><p>Je suis les performances réelles et j'ajuste chaque action pour faire évoluer votre projet dans le temps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div style="position:relative;z-index:1">
+  <div class="cta-band reveal">
+    <div class="cta-inner">
+      <h2>Prêt à décoller ?<br>Parlons de votre projet.</h2>
+      <a class="btn-dark" href="contact.html">Lancer mon projet →</a>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section" id="temoignages">
+  <div class="container">
+    <div class="reveal"><div class="s-tag">Ils me font confiance</div>
+    <h2 class="s-title">Des résultats,<br>pas des <em>promesses.</em></h2></div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Alexis a transformé notre visibilité en ligne en quelques mois. Le site est rapide, moderne, et notre trafic a triplé. Un vrai professionnel.</p>
+        <div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#e8ff47,#b8cc30);color:#000">JP</div><div><div class="testi-name">Jean-Pierre M.</div><div class="testi-role">La Gargotte</div></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">La stratégie digitale mise en place a clairement impacté notre acquisition. On voit les résultats chaque semaine. Je recommande sans hésiter.</p>
+        <div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#ff4d6d,#c2185b)">ML</div><div><div class="testi-name">Marie L.</div><div class="testi-role">Findyourstaff</div></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">Réactif, rigoureux, et vraiment impliqué dans la réussite du projet. Alexis ne livre pas et disparaît — il reste là si vous avez besoin.</p>
+        <div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#4dd0e1,#00838f)">SR</div><div><div class="testi-name">Sophie R.</div><div class="testi-role">Sheldon Skills</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="reveal"><div class="s-tag">Questions fréquentes</div>
+    <h2 class="s-title">Tout ce qu'il<br>faut <em>savoir.</em></h2></div>
+    <div class="faq-list reveal">
+      <div class="faq-item"><div class="faq-q">Combien coûte un site web ? <span class="faq-icon">+</span></div><div class="faq-a">Chaque projet est unique — parlons-en lors d'un appel découverte gratuit. Je propose un devis transparent adapté à votre budget et vos objectifs.</div></div>
+      <div class="faq-item"><div class="faq-q">Combien de temps pour créer un site ? <span class="faq-icon">+</span></div><div class="faq-a">En moyenne 3 à 6 semaines selon la complexité. Je respecte toujours les délais convenus et vous informe à chaque étape.</div></div>
+      <div class="faq-item"><div class="faq-q">Vous gérez aussi la maintenance ? <span class="faq-icon">+</span></div><div class="faq-a">Oui, des forfaits mensuels incluent mises à jour, sauvegardes, sécurité et optimisations continues. Zéro stress technique pour vous.</div></div>
+      <div class="faq-item"><div class="faq-q">Pourquoi choisir WordPress ? <span class="faq-icon">+</span></div><div class="faq-a">WordPress représente 43% du web mondial. Flexible, scalable, il vous donne une vraie autonomie sur votre contenu. Le choix le plus rentable long terme.</div></div>
+      <div class="faq-item"><div class="faq-q">Vous travaillez avec tous types de secteurs ? <span class="faq-icon">+</span></div><div class="faq-a">Oui — restaurants, startups, artisans, agences... Ma méthode s'adapte à chaque secteur avec une analyse préalable de votre marché.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="assets/images/logo.png" alt="Clicsight" height="40" alt="Clicsight" style="height:44px;width:auto;filter:brightness(1.1)"></div>
+        <p>Expert WordPress, SEO & Communication Digitale. Je vous accompagne de la création de site jusqu'au développement de votre visibilité.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="#">Site web</a></li><li><a href="#">SEO</a></li>
+        <li><a href="#">Réseaux sociaux</a></li><li><a href="#">Stratégie</a></li>
+        <li><a href="#">Contenu</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Navigation</h4><ul>
+        <li><a href="#">Accueil</a></li><li><a href="#">Expériences</a></li>
+        <li><a href="#">Mon profil</a></li><li><a href="#">Blog</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="#">Démarrer un projet</a></li>
+        <li><a href="#">Votre forfait</a></li>
+        <li><a href="#">Formulaire</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Alexis Planas — clicsight.fr</span>
+      <div class="socials">
+        <a class="social" href="#">𝕏</a>
+        <a class="social" href="#">in</a>
+        <a class="social" href="#">📸</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a href="services.html" onclick="toggleMenu()">Site web</a>
+  <a href="communication.html" onclick="toggleMenu()">Communication</a>
+  <a href="resultats.html" onclick="toggleMenu()">Parlons résultats</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  <a href="contact.html" style="color:var(--accent)">Démarrer un projet →</a>
+</div>
+
+</body>
+</html>
