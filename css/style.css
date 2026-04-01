@@ -615,3 +615,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:5r
   #ps-terre .ps-inner,#ps-neptune .ps-inner,#ps-lune .ps-inner,#ps-venus .ps-inner,#ps-soleil .ps-inner{flex-direction:row-reverse}
 }
 #ps-terre::before,#ps-neptune::before,#ps-lune::before,#ps-venus::before,#ps-soleil::before{background:radial-gradient(ellipse 60% 70% at 25% 50%,var(--glow),transparent 65%)!important}
+
+@media(min-width:769px){
+  #solar-hero-bg,#solar-finale-bg{display:none!important}
+}
