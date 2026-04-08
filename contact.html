@@ -91,13 +91,13 @@
     .hero-ey i{display:block;width:28px;height:1px;background:var(--line);}
     .hero-h1{font-family:'Outfit',sans-serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;line-height:.93;letter-spacing:-.04em;margin-bottom:12px;text-align:center;opacity:0;animation:up .7s .35s forwards;}
     .hero-h1 em{font-style:normal;color:var(--accent);}
-    .hero-sub{max-width:480px;text-align:center;font-size:.92rem;line-height:1.8;color:var(--muted);margin-bottom:44px;opacity:0;animation:up .7s .5s forwards;}
+    .hero-sub{max-width:480px;text-align:center;font-size:.92rem;line-height:1.8;color:var(--muted);margin-bottom:64px;opacity:0;animation:up .7s .5s forwards;}
 
     /* LAYOUT PRINCIPAL */
     .main-layout{
-      width:100%;max-width:1100px;
-      display:grid;grid-template-columns:380px 1fr;
-      gap:60px;align-items:start;
+      width:100%;max-width:1200px;
+      display:grid;grid-template-columns:400px 1fr;
+      gap:80px;align-items:start;
       opacity:0;animation:up .7s .65s forwards;
     }
 
@@ -132,7 +132,7 @@
     .solar-hint{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;text-align:center;}
 
     /* SÉLECTEUR */
-    .selector-wrap{display:flex;flex-direction:column;gap:20px;}
+    .selector-wrap{display:flex;flex-direction:column;gap:24px;}
     .selector-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);}
 
     .planet-grid{
@@ -655,9 +655,13 @@ updateRecap();
 
 <style>
 @media(min-width:769px){
-  .hero-h1{font-size:clamp(2.5rem,6vw,5rem);}
-  .hero-sub{font-size:1.02rem;}
+  .hero-h1{font-size:2.8rem!important;letter-spacing:-.03em!important;line-height:1.1!important;}
+  .hero-sub{font-size:1.05rem;}
   .btn-main{font-size:1.02rem;}
+  .planet-thumb{width:38px;height:38px;}
+  .planet-btn{padding:10px 5px;gap:5px;border-radius:12px;}
+  .planet-name{font-size:.52rem;}
+  .planet-grid{gap:8px;}
 }
 </style>
 </body>
